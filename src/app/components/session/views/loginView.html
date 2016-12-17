@@ -1,0 +1,31 @@
+<style>
+  body {
+    background: -webkit-radial-gradient(white, lightgray); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(white, lightgray); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(white, lightgray); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(white, lightgray); /* Standard syntax (must be last) */
+  }
+</style>
+<div class="container w-xxl w-auto-xs">
+  <div class="center-block m-b-xl m-t-lg" >
+    <!--<img class="w-xl center-block" src="img/logo.png" alt=""/>-->
+  </div>
+  <a href class="navbar-brand block m-t">{{app.name}}</a>
+  <div class="m-b-lg">
+    <form name="form" class="form-validation">
+      <div class="text-danger wrapper text-center" ng-show="error">
+          {{error}}
+      </div>
+      <div class="list-group list-group-sm">
+        <div class="list-group-item">
+          <input type="text" placeholder="Username" class="form-control no-border" ng-model="user.email" required>
+        </div>
+        <div class="list-group-item">
+           <input type="password" placeholder="Password" class="form-control no-border" ng-model="user.password" required>
+        </div>
+      </div>
+      <div class="line line-dashed"></div>
+      <button type="submit" class="btn" ng-click="login()">Log in</button>
+    </form>
+  </div>
+</div>

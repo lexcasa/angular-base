@@ -1,0 +1,16 @@
+default:
+ - build
+
+build:
+ - less
+ - copy:partials
+ - copy:deps 
+ - uglify:prod
+
+dev:
+ - less
+ - copy:partials
+ - copy:deps
+ - uglify:dev
+ - connect
+ - watch
